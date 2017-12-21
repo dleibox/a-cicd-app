@@ -1,0 +1,8 @@
+*
+!.gitignore
+!*.js*
+package-lock.json
+!/www
+!/www/*
+
+*.bak
