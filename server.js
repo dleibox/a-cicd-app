@@ -3,9 +3,10 @@ var bodyParser = require('body-parser');
 var compression = require('compression');
 
 var webapp = express();
-var morgan = require('morgan');
+var morgan = require('morgan'); // log every request. https://github.com/expressjs/morgan
 
-webapp.use(morgan('dev')); // log every request to the console
+// morgan - predefined formats: combined, common, dev, short, tiny. eg. webapp.use(morgan('dev'));
+webapp.use(morgan(':remote-addr [:date[clf]] :status ":method :url" :response-time ms - :res[content-length]'));
 webapp.use(compression());
 
 // parse application/x-www-form-urlencoded
