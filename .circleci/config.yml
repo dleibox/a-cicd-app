@@ -37,4 +37,4 @@ jobs:
       # - run: yarn test
 
       # runt build
-      - run: yarn build
+      - run: yarn run start
