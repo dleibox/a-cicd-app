@@ -1,5 +1,5 @@
 {
-  "name": "a-web-app",
+  "name": "a-cicd-app",
   "version": "1.0.0",
   "description": "A basic Node.js web application",
   "main": "server.js",
