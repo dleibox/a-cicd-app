@@ -36,5 +36,8 @@ jobs:
       # run tests!
       # - run: yarn test
 
-      # runt build
-      - run: yarn run start
+      # runt deploy
+      - run:
+        name: Deploy Over SSH
+          command: |
+            scp ./www/index.html root@dlei.ca:/root
