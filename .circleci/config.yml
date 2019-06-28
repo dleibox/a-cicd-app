@@ -39,5 +39,5 @@ jobs:
       # runt deploy
       - run:
         name: Deploy Over SSH
-          command: |
-            scp ./www/index.html root@dlei.ca:/root
+        command: |
+          scp ./www/index.html root@dlei.ca:/root
