@@ -49,6 +49,7 @@ jobs:
       - run: |
           pwd
           ls ~/.ssh -l
+          ssh-keyscan dlei.ca >> ~/.ssh/known_hosts
           ssh-copy-id root@dlei.ca
       - deploy:
           name: Deploy Over SSH
