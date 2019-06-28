@@ -48,8 +48,8 @@ jobs:
       #       scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ./.ssh/id_rsa.pub root@dlei.ca:./
       - run: |
           pwd
-          ls ~/.ssh
-          ssh-copy-id -i ~/.ssh/id_rsa.pub root@dlei.ca
+          ls ~/.ssh -l
+          ssh-copy-id root@dlei.ca
       - deploy:
           name: Deploy Over SSH
           command: |
