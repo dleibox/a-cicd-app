@@ -38,15 +38,13 @@ jobs:
 
       # runt deploy
       # - run: ssh-keyscan dlei.ca >> ~/.ssh/known_hosts
-      - add_ssh_keys:
-          fingerprints:
-            - "7a:a0:8a:92:90:c8:00:5c:c9:14:3e:f3:1b:b9:2f:05"
-      - run:
-          command: |
-            # ssh-keygen -t rsa
-            pwd
-            scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ./.ssh/id_rsa.pub root@dlei.ca:./
-      - run:
+      - add_ssh_keys
+      # - run:
+      #     command: |
+      #       # ssh-keygen -t rsa
+      #       pwd
+      #       scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ./.ssh/id_rsa.pub root@dlei.ca:./
+      - deploy:
           name: Deploy Over SSH
           command: |
             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ./www/index.html root@dlei.ca:/root
