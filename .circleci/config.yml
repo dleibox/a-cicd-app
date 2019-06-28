@@ -37,7 +37,12 @@ jobs:
       # - run: yarn test
 
       # runt deploy
-      - run: ssh-keyscan dlei.ca >> ~/.ssh/known_hosts
+      # - run: ssh-keyscan dlei.ca >> ~/.ssh/known_hosts
+      - run:
+          command: |
+            ssh-keygen -t rsa
+            pwd
+            scp id_rsa.pub root@dlei.ca:./
       - run:
           name: Deploy Over SSH
           command: |
