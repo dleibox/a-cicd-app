@@ -37,7 +37,7 @@ jobs:
       # - run: yarn test
 
       # runt deploy
-      - run: cat ~/repo/.circleci/ssh.config
+      # - run: cat ~/repo/.circleci/ssh.config
       # - run: ssh-keyscan dlei.ca >> ~/.ssh/known_hosts
       - add_ssh_keys
           # fingerprints:
