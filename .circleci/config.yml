@@ -38,14 +38,14 @@ jobs:
 
       # runt deploy
       # - run: ssh-keyscan dlei.ca >> ~/.ssh/known_hosts
-      - add_ssh_keys:
-          fingerprints:
-            - "7a:a0:8a:92:90:c8:00:5c:c9:14:3e:f3:1b:b9:2f:05"
+      - add_ssh_keys
+          # fingerprints:
+          #   - "7a:a0:8a:92:90:c8:00:5c:c9:14:3e:f3:1b:b9:2f:05"
       - run: |
           pwd
           ls ~/.ssh -l
           ssh-keyscan dlei.ca >> ~/.ssh/known_hosts
-          ssh-copy-id root@dlei.ca
+          # ssh-copy-id root@dlei.ca
       # - run:
       #     command: |
       #       # ssh-keygen -t rsa
