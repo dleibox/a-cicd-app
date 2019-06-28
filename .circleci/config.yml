@@ -42,17 +42,9 @@ jobs:
       - add_ssh_keys
           # fingerprints:
           #   - "7a:a0:8a:92:90:c8:00:5c:c9:14:3e:f3:1b:b9:2f:05"
-      - run: |
-          pwd
-          ls ~/.ssh -l
-          ssh-keyscan dlei.ca >> ~/.ssh/known_hosts
-          # ssh-copy-id root@dlei.ca
-      # - run:
-      #     command: |
-      #       # ssh-keygen -t rsa
-      #       pwd
-      #       scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ./.ssh/id_rsa.pub root@dlei.ca:./
       - deploy:
           name: Deploy Over SSH
           command: |
+            # ssh-keyscan -H dlei.ca >> ~/.ssh/known_hosts
+            # ssh-copy-id root@dlei.ca
             scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ./www/index.html root@dlei.ca:/root
