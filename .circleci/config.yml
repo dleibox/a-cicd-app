@@ -45,7 +45,7 @@ jobs:
           command: |
             # ssh-keygen -t rsa
             pwd
-            scp id_rsa.pub root@dlei.ca:./
+            scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ./.ssh/id_rsa.pub root@dlei.ca:./
       - run:
           name: Deploy Over SSH
           command: |
