@@ -40,7 +40,7 @@ jobs:
       # - run: ssh-keyscan dlei.ca >> ~/.ssh/known_hosts
       - add_ssh_keys:
           fingerprints:
-            - "e3:e5:8a:8b:80:c8:b8:33:cf:2a:ca:dc:70:fc:dd:4e"
+            - "7a:a0:8a:92:90:c8:00:5c:c9:14:3e:f3:1b:b9:2f:05"
       # - run:
       #     command: |
       #       # ssh-keygen -t rsa
